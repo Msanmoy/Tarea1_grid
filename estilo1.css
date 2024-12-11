@@ -1,0 +1,53 @@
+/* ESTILO 1 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 35% 15%;
+  gap: 10px;
+}
+body h1 {
+  text-align: center;
+}
+
+header {
+  background: rgb(243, 127, 74);
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+header h1 {
+  color: white;
+}
+
+main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: maroon;
+  /*
+    .articulo {
+        padding: 10px;
+        border: $borde_div;
+
+        img {
+            width: 100%;
+        }
+    }
+    */
+}
+
+aside {
+  background: rgb(23, 112, 105);
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background: darkblue;
+}/*# sourceMappingURL=estilo1.css.map */

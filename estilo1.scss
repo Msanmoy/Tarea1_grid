@@ -1,0 +1,59 @@
+/* ESTILO 1 */
+@import "css/mixins";
+@import "css/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 35% 15%;
+  gap: $margen_general;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+header {
+  background: $color_header;
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  h1{
+    color: $color_h1_header;
+  }
+}
+
+main {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: $color_main;
+
+  /*
+    .articulo {
+        padding: 10px;
+        border: $borde_div;
+
+        img {
+            width: 100%;
+        }
+    }
+    */
+}
+
+aside {
+  background: $color_aside;
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background: $color_footer;
+}
