@@ -1,0 +1,62 @@
+/* ESTILO 2 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+}
+@media screen and (min-width: 480px) {
+  body {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+body h1 {
+  text-align: center;
+}
+
+header {
+  background: rgb(243, 127, 74);
+  grid-column: 1/5;
+}
+header h1 {
+  color: white;
+}
+
+main {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  background: maroon;
+  /* grid main */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+main .articulo img {
+  width: 100%;
+}
+
+aside {
+  background: rgb(23, 112, 105);
+  grid-column: 1/5;
+}
+@media screen and (min-width: 480px) {
+  aside {
+    grid-column: 4;
+    grid-row: 2/4;
+  }
+}
+aside p {
+  visibility: hidden;
+}
+
+footer {
+  grid-column: 1/4;
+  background: darkblue;
+}
+footer p {
+  visibility: hidden;
+}/*# sourceMappingURL=estilo2.css.map */

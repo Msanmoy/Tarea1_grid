@@ -1,0 +1,85 @@
+/* ESTILO 1 */
+@import "../mixins";
+@import "../variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+
+  @include escritorio() {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  
+  gap: $margen_general;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+header {
+  background: $color_header;
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  h1{
+    color: $color_h1_header;
+  }
+}
+
+main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: $color_main;
+  
+
+  /* grid main */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: $margen_general;
+  
+    .articulo {
+
+        img {
+            width: 100%;
+        }
+    }
+    
+}
+
+aside {
+  background: $color_aside;
+  grid-column-start: 1;
+  grid-column-end:5 ;
+
+  @include escritorio {
+    grid-column-start: 4;
+    
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  p {
+    visibility: hidden;
+  }
+
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: $color_footer;
+
+  p {
+    visibility: hidden;
+  }
+}
