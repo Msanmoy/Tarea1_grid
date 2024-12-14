@@ -28,18 +28,19 @@ body {
 
 header {
   background: $color_header;
-  grid-column: 1/5;
-
+  @include escritorio{
+    grid-area: header;
+  }
   h1{
     color: $color_h1_header;
   }
 }
 
 main {
-  grid-column: 1/4;
-  grid-row: 2/3;
   background: $color_main;
-  
+  @include escritorio{
+    grid-area: main;
+  }
 
   /* grid main */
 
@@ -58,12 +59,9 @@ main {
 
 aside {
   background: $color_aside;
-  grid-column: 1/5;
-
+  
   @include escritorio {
-    grid-column: 4;
-    
-    grid-row: 2/4;
+    grid-area: aside;
   }
 
   p {
@@ -73,8 +71,11 @@ aside {
 }
 
 footer {
-  grid-column: 1/4;
   background: $color_footer;
+
+  @include escritorio{
+    grid-area: footer;
+  }
 
   p {
     visibility: hidden;

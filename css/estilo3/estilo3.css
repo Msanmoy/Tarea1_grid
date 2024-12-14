@@ -20,20 +20,27 @@ body h1 {
 
 header {
   background: rgb(243, 127, 74);
-  grid-column: 1/5;
+}
+@media screen and (min-width: 480px) {
+  header {
+    grid-area: header;
+  }
 }
 header h1 {
   color: white;
 }
 
 main {
-  grid-column: 1/4;
-  grid-row: 2/3;
   background: maroon;
   /* grid main */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
+}
+@media screen and (min-width: 480px) {
+  main {
+    grid-area: main;
+  }
 }
 main .articulo img {
   width: 100%;
@@ -41,12 +48,10 @@ main .articulo img {
 
 aside {
   background: rgb(23, 112, 105);
-  grid-column: 1/5;
 }
 @media screen and (min-width: 480px) {
   aside {
-    grid-column: 4;
-    grid-row: 2/4;
+    grid-area: aside;
   }
 }
 aside p {
@@ -54,8 +59,12 @@ aside p {
 }
 
 footer {
-  grid-column: 1/4;
   background: darkblue;
+}
+@media screen and (min-width: 480px) {
+  footer {
+    grid-area: footer;
+  }
 }
 footer p {
   visibility: hidden;
